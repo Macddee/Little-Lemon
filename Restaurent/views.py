@@ -15,22 +15,25 @@ from .serializers import BookingSerializer, MenuSerializer, UserSerializer
 
 
 # Create your views here.
+@permission_classes([IsAuthenticated])
 class MenuItemsView(rest_framework.generics.ListCreateAPIView):
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
 
+@permission_classes([IsAuthenticated])
 class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView, generics.DestroyAPIView):
-
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
 
+@permission_classes([IsAuthenticated])
 class BookingsView(rest_framework.generics.ListCreateAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
 
 
+@permission_classes([IsAuthenticated])
 class BookingView(generics.RetrieveUpdateDestroyAPIView, generics.DestroyAPIView):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer

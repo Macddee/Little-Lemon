@@ -8,7 +8,6 @@ urlpatterns = [
    path('booking/', views.BookingsView.as_view()),
    path('booking/<int:pk>/', views.BookingView.as_view()),
    path('message/', views.secured_view),
-   path('try/', views.MenuItemsView.as_view()),
    path('api-token-auth/', obtain_auth_token),
    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

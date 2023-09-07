@@ -23,7 +23,7 @@ from Restaurent import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('restaurent/', include('Restaurent.urls')),
+    path('restaurant/', include('Restaurent.urls')),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.authtoken')),
 
